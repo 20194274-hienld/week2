@@ -65,13 +65,3 @@ function summit() {
     }
 
 }
-
-function replaceText(selector, text, newText, flags) {
-    var matcher = new RegExp(text, flags);
-    var elems = document.body.querySelectorAll(selector), i, j;
-    for (i = 0; i < elems.length; i++) {
-        if (Object.prototype.toString.call(elems[i].childNodes[0]) === "[object Text]") {
-            elems[i].innerHTML = elems[i].innerHTML.replace(matcher, newText);
-        }
-    }
-}
